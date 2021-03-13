@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/signup.js"></script>
     <meta charset="UTF-8">
     <title> Educovery Register View </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+   
   <div class="container">
     <div class="title">Sign Up</div>
     <div class="content">
-      <form action="#">
+      <form action="#" id="signupForm">
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" placeholder="Enter your first name" required>
+            <input type="text" id ="first" name="first" placeholder="Enter your first name" required >
           </div>
           <div class="input-box">
             <span class="details">Last Name (optional)</span>
-            <input type="text" placeholder="Enter your last name" required>
+            <input type="text" id="last" name="last" placeholder="Enter your last name" >
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="email" placeholder="Enter your email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required >
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <input type="text" id="phone" name="phone" placeholder="Enter your number" pattern="[6789][0-9]{9}" oninvalid="this.setCustomValidity('Please Enter valid phone number')"
+            oninput="this.setCustomValidity('')" required >
           </div>
           <div class="input-box">
-            <span class="details">Password</span>
-            <input type="password" placeholder="Enter your password" required>
+            <span class="details">Password (Please enter STRONG Password)</span>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required >
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="password" placeholder="Confirm your password" required>
+            <input type="password" id="confirm" name="confirm" placeholder="Confirm your password" required>
           </div>
         </div>
        
         <div class="button">
-          <input type="submit" value="Create Account">
+          <input type="submit" id="sub" value="Create Account">
         </div>
 
       </form>
@@ -51,7 +54,11 @@
     </div>
     <div class="login">
         <p>Already have an account? <a href="login">Sign in</a>.</p>
+        <div>
+          <button class="button" onclick="validatedddd()">Click Me </button>
+        </div>
       </div>  </div>
+    
 
 </body>
 </html>
